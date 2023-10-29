@@ -5,7 +5,7 @@ import UnauthPage from "../../components/Unauthpage"
 
 const Browse = () => {
     const { data: session } = useSession()
-    console.log(session)
+    console.log(session, 'session')
     if (!session) {
         return <UnauthPage />
     }

@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-// import GlobalState from '../context/index'
+import GlobalState from '../context/index'
 import NextAuthProvider from '../authProvider/index'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NextAuthProvider>
-          {/* <GlobalState>{children}</GlobalState> */}
-          {children}
+          <GlobalState>{children}</GlobalState>
+          {/* {children} */}
         </NextAuthProvider>
       </body>
     </html>
